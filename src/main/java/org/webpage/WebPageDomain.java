@@ -94,9 +94,7 @@ public class WebPageDomain {
         sb.append(".wrapper { text-align: left; font-family: Microsoft Yahei; }\n");
         sb.append(".wrapper .clearfix { overflow: auto; _height: 1% }\n");
         sb.append(".wrapper>div { background-position: top center; background-repeat: no-repeat; }\n");
-        String iframe = "";
         if ("y".equals(hundred)) {
-            iframe = "background-size:100% 100%";
             sb.append(".wrapper>div>div, .wrapper>div>img { display: block; width: 100%; max-width: 1920px; margin: 0 auto; background-position: top center; background-repeat: no-repeat; }\n");
         } else {
             sb.append(".wrapper>div>div, .wrapper>div>img { display: block; width: " + width + "px; margin: 0 auto; background-position: top center; background-repeat: no-repeat; }\n");
@@ -124,8 +122,13 @@ public class WebPageDomain {
             buffer = ImageIO.read(rollImg);
             int rollHeight = buffer.getHeight();
             // 添加htm样式
-            sb.append("#con-" + rollOneInt + "{ background-image: url(img0.jiameng.com/" + picStr + "); height: " + bgHeight + "px; " + iframe + "}\n");
-            sb.append("#con-" + rollOneInt + " iframe { width: 1820px; height: " + rollHeight + "px; margin-top: 50px; margin-left: 20px; }\n");
+            if ("y".equals(hundred)) {
+                sb.append("#con-" + rollOneInt + "{ background-image: url(img0.jiameng.com/" + picStr + "); height: " + bgHeight + "px; background-size:100% 100%; }\n");
+                sb.append("#con-" + rollOneInt + " iframe { width: 90.5%; height: " + rollHeight + "px; padding-top: 50px; margin-left: 10.5%; }\n");
+            } else {
+                sb.append("#con-" + rollOneInt + "{ background-image: url(img0.jiameng.com/" + picStr + "); height: " + bgHeight + "px; }\n");
+                sb.append("#con-" + rollOneInt + " iframe { width: 1820px; height: " + rollHeight + "px; padding-top: 50px; margin-left: 20px; }\n");
+            }
             // 生成滚动html
             StringBuilder rollSb = new StringBuilder();
             rollSb.append("<html xmlns=\"http://www.w3.org/1999/xhtml\">\n");
@@ -187,8 +190,13 @@ public class WebPageDomain {
             buffer = ImageIO.read(rollImg);
             int rollHeight = buffer.getHeight();
             // 添加htm样式
-            sb.append("#con-" + rollTwoInt + "{ background-image: url(img0.jiameng.com/" + picStr + "); height: " + bgHeight + "px; " + iframe + "}\n");
-            sb.append("#con-" + rollTwoInt + " iframe { width: 1820px; height: " + rollHeight + "px; margin-top: 50px; margin-left: 20px; }\n");
+            if ("y".equals(hundred)) {
+                sb.append("#con-" + rollTwoInt + "{ background-image: url(img0.jiameng.com/" + picStr + "); height: " + bgHeight + "px; background-size:100% 100%; }\n");
+                sb.append("#con-" + rollTwoInt + " iframe { width: 90.5%; height: " + rollHeight + "px; padding-top: 50px; margin-left: 10.5%; }\n");
+            } else {
+                sb.append("#con-" + rollTwoInt + "{ background-image: url(img0.jiameng.com/" + picStr + "); height: " + bgHeight + "px; }\n");
+                sb.append("#con-" + rollTwoInt + " iframe { width: 1820px; height: " + rollHeight + "px; padding-top: 50px; margin-left: 20px; }\n");
+            }
             // 生成滚动html
             StringBuilder rollSb = new StringBuilder();
             rollSb.append("<html xmlns=\"http://www.w3.org/1999/xhtml\">\n");
