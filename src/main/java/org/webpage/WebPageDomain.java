@@ -142,7 +142,7 @@ public class WebPageDomain {
             rollSb.append("</style>\n");
             rollSb.append("</head>\n");
             rollSb.append("<body>\n");
-            rollSb.append("<div id=\"demo\" style=\"width:1820px; height:" + rollHeight + "px; overflow:hidden\">\n");
+            rollSb.append("<div id=\"demo\" style=\"width:1920px; height:" + rollHeight + "px; overflow:hidden\">\n");
             rollSb.append("<table cellpadding=\"0\" width=\"100%\" align=\"left\" cellspacing=\"0\" border=\"0\">\n");
             rollSb.append("<tbody><tr><td id=\"demo1\" valign=\"top\"><table cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" align=\"center\" border=\"0\">\n");
             rollSb.append("<tbody><tr>\n");
@@ -210,7 +210,7 @@ public class WebPageDomain {
             rollSb.append("</style>\n");
             rollSb.append("</head>\n");
             rollSb.append("<body>\n");
-            rollSb.append("<div id=\"demo\" style=\"width:1820px; height:" + rollHeight + "px; overflow:hidden\">\n");
+            rollSb.append("<div id=\"demo\" style=\"width:1920px; height:" + rollHeight + "px; overflow:hidden\">\n");
             rollSb.append("<table cellpadding=\"0\" width=\"100%\" align=\"left\" cellspacing=\"0\" border=\"0\">\n");
             rollSb.append("<tbody><tr><td id=\"demo1\" valign=\"top\"><table cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" align=\"center\" border=\"0\">\n");
             rollSb.append("<tbody><tr>\n");
